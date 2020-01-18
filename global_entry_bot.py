@@ -33,7 +33,7 @@ def get_location_id(city):
     return location_id
 
 def check_appointments(city, location_id, date_limit):
-    APPOINTMENTS_URL = "https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=2&asLocations={}&minimum=1"
+    APPOINTMENTS_URL = "https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=2&locationId={}&minimum=1"
     url = APPOINTMENTS_URL.format(location_id)
     appointments = requests.get(url).json()
     result = {'appointment': False, 'city': city, 'time': None}
