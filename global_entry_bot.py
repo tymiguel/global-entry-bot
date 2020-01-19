@@ -22,6 +22,7 @@ date_limit  = '2020-03-07' # max date to search for i.e. if you already have an 
 location_id = -1 # id of the city
 
 def get_location_id(city):
+    """Find the location ID for the interview city."""
     location_id = -1
     LOCATIONS_URL = "https://ttp.cbp.dhs.gov/schedulerapi/slots/asLocations?limit=1000"
 
@@ -33,6 +34,7 @@ def get_location_id(city):
     return location_id
 
 def check_appointments(city, location_id, date_limit):
+    """Submit request to TPP site and confirm if appointment is available."""
     APPOINTMENTS_URL = "https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=2&locationId={}&minimum=1"
     url = APPOINTMENTS_URL.format(location_id)
     appointments = requests.get(url).json()
