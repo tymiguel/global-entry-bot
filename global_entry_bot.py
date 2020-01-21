@@ -18,7 +18,7 @@ to_number = os.getenv("TO_NUMBER")
 
 # search parameters
 city = "East Boston"  # city where you want to have your interview
-date_limit  = '2020-03-07' # max date to search for i.e. if you already have an interview but want an earlier one
+date_limit  = '2020-01-28' # max date to search for i.e. if you already have an interview but want an earlier one
 location_id = -1 # id of the city
 
 def get_location_id(city):
