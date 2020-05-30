@@ -28,7 +28,7 @@ Lastly, add the phone number that will be recieving the messages to the Verified
 ## 2. Set up credentials
 In the root directory of the project `global-entry-bot/`, create a `.env` file. This will store your Twilio credentials and the phone number you want to recieve the bot messages.
 
-The file should contain `FROM_NUMBER`, `TO_NUMBER`, 'ACCOUNT_SID`, and `AUTH_TOKEN`. See below for an example of the `.env` file structure.
+The file should contain `FROM_NUMBER`, `TO_NUMBER`, `ACCOUNT_SID`, and `AUTH_TOKEN`. See below for an example of the `.env` file structure.
 
 ```
 FROM_NUMBER=<twilio phone number>
